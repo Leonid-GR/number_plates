@@ -1,10 +1,23 @@
 package org.example;
 
+import java.util.Scanner;
+
+import java.util.Scanner;
+
 public class Main {
+
     public static void main(String[] args) {
 
-        System.out.println(PlateValidator.isValid("HA-AB 1234"));
-        System.out.println(PlateNormalizer.normalize("haab1234"));
-        System.out.println(PlateService.maskPlate("HA-AB 1234"));
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Enter text:");
+        String text = sc.nextLine();
+
+        String result = CharCounter.countChars(text);
+
+        System.out.println("Result:");
+        System.out.println(result);
+
+        sc.close();
     }
 }
